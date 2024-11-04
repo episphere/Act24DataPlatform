@@ -5,7 +5,7 @@ export const infoDeck = () => {
     template += `
         <div class="secondary-bg padding-bottom-1rem">
             <div class="confluence-banner">
-                <img src="./static/images/Picture7.jpg" class="banner-logo" style="min-height: 120px;" alt="ACT24 background">
+                <img src="./static/images/Picture7.jpg" class="banner-logo" alt="ACT24 background">
                 <div class="banner-overlay-text row justify-content-center text-center">
                     <div class="col-xl-12">
                         <h1 class="banner-overlay-h1">ACT24 DATA PLATFORM</h1>

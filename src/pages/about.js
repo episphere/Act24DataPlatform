@@ -30,40 +30,18 @@ export const renderOverView = async () => {
             <div class="main-summary-row black-font">
                 <div class="col align-left pt-2">
                     <div class="mb-3">
-                        The Confluence project is developing a large research resource to uncover breast cancer genetics through genome-wide association studies (GWAS) in diverse populations.
+                        View ACT24’s Home Page, including a description of the ACT24 recall system, a link to the Researcher Site to access the tool, and selected ACT24 publications.
                     </div>
                     <div class="mb-3">
-                        Broad scientific aims include:
+                        <a href="https://dceg.cancer.gov/research/how-we-study/exposure-assessment/activities-completed-over-time-24-hours-act-24" target="_blank" rel="noopener noreferrer">ACT24 Home Link</a>
                     </div>
-                    <div class="mb-3">
-                        <ul>
-                            <li>To discover susceptibility loci and advance knowledge of etiology of breast cancer overall and by subtypes.</li>
-                            <li>To develop polygenic risk scores and integrate them with known risk factors for personalized risk assessment for breast cancer overall and by subtypes.</li>
-                            <li>To discover loci for breast cancer prognosis, long-term survival, response to treatment, and second breast cancer.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="mb-3">
-                        The Confluence project will harmonize existing genome-wide genotyping data from about 150,000 cases and 200,000 controls and double it by generating new genotypes from at least 150,000 additional breast cancer cases and 100,000 controls, for a total of at least 300,000 cases and 300,000 controls of different ancestries. Confluence will also harmonize risk factor, pathology, treatment, toxicities and survival data across studies. Genotyping and harmonization of data is expected to be completed in 2022.
-                    </div>
-                    <div>
-                        The table below shows the current number of cases and controls from different participating consortia/studies. Numbers are updated regularly.
-                    </div>
-                </div>
-            </div>
-            <div class="align-left black-font" id="confluenceDataSummary"></div>
-            <div class="main-summary-row align-left">
-                <div class="col">
-                    <!---For more information:</br>
-                    Visit: <a href="https://dceg.cancer.gov/research/cancer-types/breast-cancer/confluence-project" target="_blank" rel="noopener noreferrer">https://dceg.cancer.gov/research/cancer-types/breast-cancer/confluence-project</a></br>--->
-                    Email: <a href="mailto:ConfluenceProject@nih.gov">ConfluenceProject@nih.gov</a>
                 </div>
             </div>
         </div>
     `;
     document.getElementById('overview').innerHTML = template;
-    const response = await fetch('https://raw.githubusercontent.com/episphere/confluence/master/publicDataSet.json');
-    countPublicStatistics(await response.json(), true);
+    //const response = await fetch('https://raw.githubusercontent.com/episphere/confluence/master/publicDataSet.json');
+    //countPublicStatistics(await response.json(), true);
 }
 
 const countPublicStatistics = (d, caseControl) => {
